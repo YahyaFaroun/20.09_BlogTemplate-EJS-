@@ -5,7 +5,7 @@ const app = express()
 const blogsData = require('./blogsData.json')
 const randomBlogsData = require('./blogsData.json').slice(2, 8)
 // console.log(randomBlogsData);
-
+const PORT = process.env.PORT || 4000
 
 //Form Daten speichern
 app.use(express.json())
