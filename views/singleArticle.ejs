@@ -1,0 +1,37 @@
+<%- include ('./partials/head')  %>
+
+<body>
+    <%- include ('./partials/nav') %>
+    <main id="mainBlogs">
+        <section id="singleArticle">
+            <h1><%= article.title %></h1>
+            <img src="<%= article.url %>" alt="">
+            <hr class="hr">
+            <article id="blogAuthor">
+                <div>
+                    <img src="<%= article.author_bild %>" alt="">
+                    <div>
+                        <h4><%= article.author %></h4>
+                        <p><%= article.duration %></p>
+                    </div>
+                    <img src="/twitter.svg" alt="">
+                </div>
+                <%= article.body %>
+            </article>
+        </section>
+        <img class="eyes" src="/eyes.svg" alt="">
+        <section id="random6">
+            <% randomBlogsData.forEach(elt => { %>
+            <article class="articles">
+                <a href="/blog/<%=elt.id%>"><img src=<%= elt.url %> alt=""></a>
+                <a href="/blog/<%=elt.id%>">
+                    <h4><%= elt.title %> </h4>
+                </a>
+            </article>
+            <% }) %>
+        </section>
+    </main>
+    <%- include ('./partials/footer') %>
+</body>
+
+</html>

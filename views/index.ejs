@@ -1,0 +1,30 @@
+<%- include ('./partials/head')  %>
+
+<body>
+    <%- include ('./partials/nav') %>
+    <main>
+        <section id="topArticle">
+            <a href="/blog/<%=blogsData[0].id%>"><img src=<%= blogsData[0].url %> alt=""></a>
+            <a href="/blog/<%=blogsData[0].id%>">
+                <h1><%= blogsData[0].title %></h1>
+            </a>
+        </section>
+        <section class="betweenArticle">
+            <hr class="hr">
+            <h2>All articles</h2>
+        </section>
+        <section id="mainArticle">
+            <% for( let i = 1; i < blogsData.length; i++ ) { %>
+            <article class="articles">
+                <a href="/blog/<%=blogsData[i].id%>"><img src=<%= blogsData[i].url %> alt=""></a>
+                <a href="/blog/<%=blogsData[i].id%>">
+                    <h4><%= blogsData[i].title %> </h4>
+                </a>
+            </article>
+            <% } %>
+        </section>
+    </main>
+    <%- include ('./partials/footer') %>
+</body>
+
+</html>

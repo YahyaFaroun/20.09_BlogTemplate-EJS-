@@ -1,0 +1,35 @@
+<%- include ('./partials/head')  %>
+
+<body>
+    <%- include ('./partials/nav') %>
+    <main>
+        <section class="betweenArticle">
+            <h2>ADD NEW ARTICLE</h2>
+            <hr class="hr">
+        </section>
+        <form action="/contactForm" method="POST">
+            <input type="text" name="title" id="" placeholder="Titel">
+            <input type="url" name="url" src="" alt="" placeholder="Url Picture">
+            <input type="text" name="author" id="Author" placeholder="Author">
+            <input type="url" name="url_bild" src="" alt="" placeholder="Url Author">
+            <textarea class="inputBox" name="body" rows="10" placeholder="Write your article here..."></textarea>
+
+            <input type="submit" value="SEND ARTICLE">
+        </form>
+        <img class="eyes" src="eyes.svg" alt="">
+        <h1>What to read next</h1>
+        <section id="random6">
+            <% randomBlogsData.forEach(elt => { %>
+            <article class="articles">
+                <a href="/blog/<%=elt.id%>"><img src=<%= elt.url %> alt=""></a>
+                <a href="/blog/<%=elt.id%>">
+                    <h4><%= elt.title %> </h4>
+                </a>
+            </article>
+            <% }) %>
+        </section>
+    </main>
+    <%- include ('./partials/footer') %>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Poppins', 'Fira Code', 'monospace';
+    margin: 0;
+}
+nav{
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    padding: 0 10% 0 5%;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    align-self: center;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.active{
+    text-decoration: underline;
+}
+.eyes{
+    width: 100%;
+}
+.hr{
+    width: 50%;
+    height: 2px;
+    background-color: black;
+    margin-top: 10vh;
+}
+
+
+#topArticle{
+    text-align: center;
+    margin-top: 10vh;
+}
+#topArticle h1{
+    font-size: 3em;
+    color: black;
+    padding: 0 15%;
+    margin-bottom: 10vh;
+}
+#topArticle a{
+    text-decoration: none;
+}
+.betweenArticle h2{
+    font-size: 2.6em;
+    text-align: center;
+    
+}
+
+
+#mainArticle{
+    margin: 10vh 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+}
+.articles{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.articles a{
+    text-decoration: none; 
+    padding: 0 20%;
+}
+.articles h4{
+    font-weight: lighter;
+    font-family: 'Fira Code';
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+}
+
+#random6{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10vh 10%;
+}
+
+
+form{
+    margin: 10vh 10%;
+}
+form input, form textarea{
+    width: 100%;
+    height: 60px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+
+    box-sizing: border-box;
+    color: rgba(51, 51, 51, 0.5);
+    background: #E5E5E5;
+    border-radius: 5px;
+    border: none;
+}
+form input[type="submit"]{
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: black;
+}
+form textarea{
+    height: 140px;       
+} 
+h1{
+    text-align: center;
+}
+
+
+/*  Blogs   */
+#singleArticle h1{
+    font-size: 3em;
+    padding: 0 20%;
+}
+#singleArticle img{
+    width: 100%;
+}
+#blogAuthor{
+    margin: 0 25% 10vh;
+}
+#blogAuthor > div{
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
+    grid-template-rows: 10vh;
+    margin-bottom: 5vh;
+}
+#blogAuthor div div{
+    display: flex;
+    flex-direction: column;
+}
+#blogAuthor div img:last-of-type{
+    justify-self: end;
+    width: 100%;
+}
+#blogAuthor h4{
+    margin: 0;
+}
+#singleArticle #blogAuthor img:first-of-type{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+
+/*  404 Error   */
+#error404 img{
+    width: 100%;
+}
+/*  Footer  */
+footer{
+    background-color: black;
+    text-align: center;
+}
+footer article{
+    display: flex;
+    justify-content: space-between;
+}
+footer article h3{
+    color: #FFFFFF;
+    font-family: 'Fira Code';
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+footer img{
+    color: white;
+    margin-top: 10vh;
+}
+footer p{
+    color: #FFFFFF;
+    font-weight: 300;
+    padding: 10px 30%;
+}
+footer div a{
+    font-family: 'Fira Code';
+    color: #FFFFFF;
+    font-weight: 300;
+    padding: 0 10px;
+}
+footer p:last-of-type{
+    font-size: .6em;
+}
